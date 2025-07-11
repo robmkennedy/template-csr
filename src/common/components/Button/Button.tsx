@@ -1,18 +1,14 @@
-import type { Variant } from 'common/types/common.types.ts';
-import styles from './Button.module.css';
+import type { ButtonProps as MantineButtonProps } from '@mantine/core';
+import { Button as MantineButton } from '@mantine/core';
 
-type ButtonProps = {
-    label: string;
-    onClick: () => void;
-    variant?: Variant;
-};
+type ButtonProps = MantineButtonProps & { label: string; onClick: () => void };
 
 export function Button(props: ButtonProps) {
-    const { label, variant = 'primary', onClick }: ButtonProps = props;
+    const { label, onClick, ...mantineProps }: ButtonProps = props;
 
     return (
-        <button className={`${styles.btn} ${styles[variant]}`} onClick={onClick}>
+        <MantineButton {...mantineProps} onClick={onClick}>
             {label}
-        </button>
+        </MantineButton>
     );
 }

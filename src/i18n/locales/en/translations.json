@@ -1,0 +1,12 @@
+{
+    "app": {
+        "header": {
+            "title": "Template",
+            "navs": {
+                "reviews": "Reviews",
+                "recommendations": "Recommendations",
+                "about": "About"
+            }
+        }
+    }
+}

@@ -1,4 +1,6 @@
-export default {
+import { type Config } from "prettier";
+
+const config: Config = {
     tabWidth: 4,
     printWidth: 120,
     singleQuote: true,
@@ -6,3 +8,6 @@ export default {
     bracketSameLine: true,
     trailingComma: 'none'
 };
+
+export default config;
+
