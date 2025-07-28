@@ -1,8 +1,10 @@
 import { AppShell, Burger, Group } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
+
 import { Main } from '~app/Main/Main.tsx';
-import { Header } from '~app/Header/Header.tsx';
-import { Navbar } from '~app/Navbar/Navbar.tsx';
+import { Header } from '~app/Header/Header';
+import { Navbar } from '~app/Navbar/Navbar';
+import { Footer } from '~app/Footer/Footer';
 
 export function App() {
     const [opened, { toggle }] = useDisclosure();
@@ -11,6 +13,7 @@ export function App() {
         <AppShell
             header={{ height: 60 }}
             navbar={{ width: 300, breakpoint: 'sm', collapsed: { desktop: true, mobile: !opened } }}
+            footer={{ height: 60 }}
             padding='md'>
             <AppShell.Header>
                 <Group h='100%' px='md'>
@@ -26,6 +29,10 @@ export function App() {
             <AppShell.Main>
                 <Main />
             </AppShell.Main>
+
+            <AppShell.Footer>
+                <Footer />
+            </AppShell.Footer>
         </AppShell>
     );
 }

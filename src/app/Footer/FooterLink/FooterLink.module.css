@@ -1,0 +1,9 @@
+.root {
+    flex-direction: column;
+}
+
+.section {
+    &[data-position='left'] {
+        margin-inline-end: 0;
+    }
+}

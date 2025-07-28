@@ -2,11 +2,37 @@
     "app": {
         "header": {
             "title": "Template",
-            "navs": {
-                "reviews": "Reviews",
-                "recommendations": "Recommendations",
+            "nav": {
+                "search": "Search",
+                "items": "Items",
+                "charts": "Charts",
                 "about": "About"
             }
+        },
+        "footer": {
+            "navs": {
+                "about": "About"
+            }
+        }
+    },
+    "common": {
+        "grid": {
+            "more": "Show More",
+            "error": "An error occurred while loading items.",
+            "empty": "No items matching the search were found."
+        }
+    },
+    "search": {
+        "input": {
+            "button": "Search",
+            "placeholder": "Enter name",
+            "clear": "Clear search input"
+        },
+        "results": {
+            "loading": "Searching for items...",
+            "enter": "Enter a search term above to show results",
+            "error": "An error occurred while searching for results",
+            "total": "Found {{totalResults}} items"
         }
     }
 }
