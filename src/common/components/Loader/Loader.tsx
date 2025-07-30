@@ -1,4 +1,4 @@
-import { Container, Loader as MantineLoader } from '@mantine/core';
+import { Box, Center, Container, Loader as MantineLoader } from '@mantine/core';
 
 type LoaderProps = {
     message?: string;
@@ -10,8 +10,10 @@ type LoaderProps = {
 export function Loader({ message }: LoaderProps) {
     return (
         <Container fluid>
-            <MantineLoader></MantineLoader>
-            {message && <div>{message}</div>}
+            <Center>
+                <MantineLoader />
+            </Center>
+            {message && <Center mt={'md'}><Box>{message}</Box></Center>}
         </Container>
     );
 }

@@ -31,8 +31,11 @@
         "results": {
             "loading": "Searching for items...",
             "enter": "Enter a search term above to show results",
-            "error": "An error occurred while searching for results",
-            "total": "Found {{totalResults}} items"
+            "error": "An error occurred while searching for results"
+        },
+        "details": {
+            "loading": "Loading details...",
+            "error": "An error occurred while loading details"
         }
     }
 }

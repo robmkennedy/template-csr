@@ -22,9 +22,7 @@ export const useSearchQuery = ({ searchTerm }: SearchQuery) => {
         getNextPageParam: (lastPage: SearchResultPage, pages: SearchResultPage[]) => {
             const totalResults = parseInt(lastPage.totalResults);
             const totalPageCount = Math.ceil(totalResults / 10);
-            const npp = pages.length < totalPageCount ?  pages.length + 1 : undefined;
-            console.log('NPP = ' + npp)
-            return npp;
+            return pages.length < totalPageCount ?  pages.length + 1 : undefined;
         },
         enabled: !!searchTerm
     });

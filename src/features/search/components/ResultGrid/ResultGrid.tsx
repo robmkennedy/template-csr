@@ -1,29 +1,18 @@
 import { type ReactNode, useState } from 'react';
 import { Container } from '@mantine/core';
-import { ImageCard } from '~common/components/ImageCard/ImageCard';
-import { InfiniteGrid } from '~common/components/InfiniteGrid/InfiniteGrid';
+import type { SearchResultItem } from '~features/search/searchTypes';
+import { ResultGridCell } from '~features/search/components/ResultGrid/ResultGridCell/ResultGridCell';
 import { DetailDrawer } from '~features/search/components/DetailDrawer/DetailDrawer';
-import type { SearchResultItem, SearchResultPage } from '~features/search/searchTypes';
+import { InfiniteGrid } from '~common/components/InfiniteGrid/InfiniteGrid';
 import { useSearchQuery } from '~features/search/api/useSearchQuery';
-
-type ResultGridProps = {
-    searchTerm: string;
-    hasNextPage: boolean;
-    fetchNextPage: () => void;
-    isFetchingNextPage: boolean;
-    isFetchNextPageError: boolean;
-    dataPages: SearchResultPage[] | undefined;
-};
+import { useSearchTerm } from '~features/search/hooks/searchHooks';
 
 /**
  * A text element that can be shared between the pages and used as the page title.
  */
-export function ResultGrid(props: ResultGridProps) {
+export function ResultGrid() {
     const [selectedItem, setSelectedItem] = useState<SearchResultItem | null>(null);
-    const sTerm = '';
-    console.log(`Search TERM: ` + sTerm)
-    const { searchTerm } = props;
-    // const { searchTerm, dataPages = [], hasNextPage, fetchNextPage, isFetchingNextPage, isFetchNextPageError } = props;
+    const [searchTerm] = useSearchTerm();
 
     const {
         data = { pages: [] },
@@ -43,16 +32,7 @@ export function ResultGrid(props: ResultGridProps) {
 
     const cells = data.pages.reduce<ReactNode[]>((accumulator, currentPage) => {
         const currentCells = currentPage.Search.map((resultItem) => {
-            const { imdbID, Poster, Title, Year } = resultItem;
-            return (
-                <ImageCard
-                    key={imdbID}
-                    ratio={1 / 1.54}
-                    img={Poster}
-                    alt={`${Title} (${Year})`}
-                    onClick={() => handleCellClick(resultItem)}
-                />
-            );
+            return <ResultGridCell resultItem={resultItem} onClick={handleCellClick}/>
         });
         return accumulator.concat(currentCells);
     }, []);

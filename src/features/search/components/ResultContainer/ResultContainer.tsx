@@ -1,8 +1,9 @@
-import { Container, Loader } from '@mantine/core';
+import { Container } from '@mantine/core';
 import { Notice } from '~common/components/Notice/Notice';
+import { Loader } from '~common/components/Loader/Loader';
 import { ResultGrid } from '~features/search/components/ResultGrid/ResultGrid';
 import { useSearchQuery } from '~features/search/api/useSearchQuery';
-import { useSearchTerm } from '~features/search/slices/searchFeatureSlice';
+import { useSearchTerm } from '~features/search/hooks/searchHooks';
 import { useTranslation } from 'react-i18next';
 
 /**
@@ -11,27 +12,14 @@ import { useTranslation } from 'react-i18next';
 export function ResultContainer() {
     const { t } = useTranslation();
     const [searchTerm] = useSearchTerm();
-    const searchResult = useSearchQuery({ searchTerm });
-    const { data, isSuccess, isPending, isError } = searchResult;
-    const { hasNextPage, fetchNextPage, isFetchingNextPage, isFetchNextPageError } = searchResult; // Tidier!
-
-    console.log(searchResult);
+    const { isSuccess, isPending, isError } = useSearchQuery({ searchTerm });
 
     return (
         <Container mt='lg' size='xl'>
             {!isError && !isSuccess && !searchTerm && <Notice message={t('search.results.enter')} />}
             {isError && !isPending && <Notice message={t('search.results.error')} />}
-            {!isError && isPending && searchTerm && <Loader />}
-            {!isError && !isPending && isSuccess && (
-                <ResultGrid
-                    searchTerm={searchTerm}
-                    dataPages={data?.pages}
-                    hasNextPage={hasNextPage}
-                    fetchNextPage={fetchNextPage}
-                    isFetchingNextPage={isFetchingNextPage}
-                    isFetchNextPageError={isFetchNextPageError}
-                />
-            )}
+            {!isError && isPending && searchTerm && <Loader message={t('search.results.loading')} />}
+            {!isError && !isPending && isSuccess && <ResultGrid />}
         </Container>
     );
 }

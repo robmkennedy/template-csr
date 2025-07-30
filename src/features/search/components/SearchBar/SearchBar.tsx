@@ -1,9 +1,8 @@
 import { type ChangeEvent, type KeyboardEvent, useState } from 'react';
 import { Button, Center, CloseButton, Flex, TextInput } from '@mantine/core';
-import { useSearchTerm } from '~features/search/slices/searchFeatureSlice';
+import { useSearchTerm } from '~features/search/hooks/searchHooks';
 import { useTranslation } from 'react-i18next';
 import styles from './SearchBar.module.css';
-import { useGetInfiniteItemsByNameInfiniteQuery } from '~features/search/slices/searchApiSlice';
 
 /**
  * An input group component used to provide a search bar for the user. The onSearch property
@@ -13,11 +12,10 @@ import { useGetInfiniteItemsByNameInfiniteQuery } from '~features/search/slices/
 export function SearchBar() {
     const { t } = useTranslation();
     const [inputValue, setInputValue] = useState<string>('');
-    const dispatchSetSearchTerm = useSearchTerm()[1];
-    const {} = useGetInfiniteItemsByNameInfiniteQuery();
+    const setSearchTerm = useSearchTerm()[1];
 
     const handleSearch = () => {
-        inputValue && dispatchSetSearchTerm(inputValue);
+        inputValue && setSearchTerm(inputValue);
     };
 
     const handleKeyUp = (event: KeyboardEvent<HTMLInputElement>) => {
