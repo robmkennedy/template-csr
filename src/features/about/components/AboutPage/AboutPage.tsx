@@ -1,5 +1,5 @@
-import { Stack } from '@mantine/core';
-import { Page } from '~common/components/Page/Page';
+import { Center } from '@mantine/core';
+import { Page } from '~/shared/components/Page/Page';
 
 /**
  * The home page of the application. It presents a search bar to the user allowing
@@ -9,9 +9,9 @@ import { Page } from '~common/components/Page/Page';
 export function AboutPage() {
     return (
         <Page>
-            <Stack mt='lg' gap='xl'>
+            <Center mt='xl'>
                 <div>About Page</div>
-            </Stack>
+            </Center>
         </Page>
     );
 }

@@ -1,6 +1,6 @@
 import { Group } from '@mantine/core';
-import { HeaderNav } from '~app/Header/HeaderNav/HeaderNav';
-import { HeaderLogo } from '~app/Header/HeaderLogo/HeaderLogo';
+import { HeaderNav } from '~app/components/Header/HeaderNav/HeaderNav';
+import { HeaderLogo } from '~app/components/Header/HeaderLogo/HeaderLogo';
 
 export function Header() {
     return (

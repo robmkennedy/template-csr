@@ -1,9 +1,9 @@
 import { type ReactNode, useState } from 'react';
 import { Container } from '@mantine/core';
-import type { SearchResultItem } from '~features/search/searchTypes';
+import { InfiniteGrid } from '~shared/components/InfiniteGrid/InfiniteGrid';
+import type { SearchResultItem } from '~features/search/types/searchTypes';
 import { ResultGridCell } from '~features/search/components/ResultGrid/ResultGridCell/ResultGridCell';
 import { DetailDrawer } from '~features/search/components/DetailDrawer/DetailDrawer';
-import { InfiniteGrid } from '~common/components/InfiniteGrid/InfiniteGrid';
 import { useSearchQuery } from '~features/search/api/useSearchQuery';
 import { useSearchTerm } from '~features/search/hooks/searchHooks';
 

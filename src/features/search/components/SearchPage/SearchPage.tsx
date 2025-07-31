@@ -1,5 +1,5 @@
 import { Stack } from '@mantine/core';
-import { Page } from '~common/components/Page/Page';
+import { Page } from '~/shared/components/Page/Page';
 import { SearchBar } from '~features/search/components/SearchBar/SearchBar';
 import { ResultContainer } from '~features/search/components/ResultContainer/ResultContainer';
 

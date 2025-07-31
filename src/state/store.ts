@@ -1,16 +1,12 @@
 import { create } from 'zustand';
+import { createAppSlice, type AppSlice } from '~app/state/appSlice';
 import { createSearchSlice, type SearchSlice } from '~features/search/state/searchSlice';
-import type { StateCreator } from 'zustand/vanilla';
 
 // Build an overall Store type
-type GlobalStore = SearchSlice;
-
-// export const createSearchSlice: StateCreator<SearchSlice, [], [], SearchSlice> = (set) => ({
-//     searchTerm: '',
-//     setSearchTerm: (searchTerm) => set(() => ({ searchTerm: searchTerm }))
-// });
+type GlobalStore = AppSlice & SearchSlice;
 
 // Actually create the store from multiple slices
 export const useGlobalStore = create<GlobalStore>()((...args) => ({
+    ...createAppSlice(...args),
     ...createSearchSlice(...args)
 }));

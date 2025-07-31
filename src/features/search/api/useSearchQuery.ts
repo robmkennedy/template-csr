@@ -1,5 +1,5 @@
 import axios from 'axios';
-import type { SearchQuery, SearchResultPage } from '~features/search/searchTypes';
+import type { SearchQuery, SearchResultPage } from '~features/search/types/searchTypes';
 import { useInfiniteQuery } from '@tanstack/react-query';
 
 const apiKey = 'eb143593';

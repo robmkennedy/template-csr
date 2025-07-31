@@ -1,5 +1,5 @@
-import type { SearchResultItem } from '~features/search/searchTypes';
-import { ImageCard } from '~common/components/ImageCard/ImageCard';
+import type { SearchResultItem } from '~features/search/types/searchTypes';
+import { ImageCard } from '~shared/components/ImageCard/ImageCard';
 
 type ResultGridCellProps = {
     resultItem: SearchResultItem;

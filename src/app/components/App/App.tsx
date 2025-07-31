@@ -1,23 +1,23 @@
 import { AppShell, Burger, Group } from '@mantine/core';
-import { useDisclosure } from '@mantine/hooks';
+import { Header } from '~app/components/Header/Header';
+import { Navbar } from '~app/components/Navbar/Navbar';
+import { Footer } from '~app/components/Footer/Footer';
+import { Outlet } from 'react-router';
 
-import { Main } from '~app/Main/Main.tsx';
-import { Header } from '~app/Header/Header';
-import { Navbar } from '~app/Navbar/Navbar';
-import { Footer } from '~app/Footer/Footer';
+import { useNavbarOpened } from '~app/hooks/appHooks';
 
 export function App() {
-    const [opened, { toggle }] = useDisclosure();
+    const [navbarOpened, toggleNavbarOpened] = useNavbarOpened();
 
     return (
         <AppShell
             header={{ height: 60 }}
-            navbar={{ width: 300, breakpoint: 'sm', collapsed: { desktop: true, mobile: !opened } }}
+            navbar={{ width: 300, breakpoint: 'sm', collapsed: { desktop: true, mobile: !navbarOpened } }}
             footer={{ height: 60 }}
             padding='md'>
             <AppShell.Header>
                 <Group h='100%' px='md'>
-                    <Burger opened={opened} onClick={toggle} hiddenFrom='sm' size='sm' />
+                    <Burger opened={navbarOpened} onClick={toggleNavbarOpened} hiddenFrom='sm' size='sm' />
                     <Header />
                 </Group>
             </AppShell.Header>
@@ -27,7 +27,7 @@ export function App() {
             </AppShell.Navbar>
 
             <AppShell.Main>
-                <Main />
+                <Outlet />
             </AppShell.Main>
 
             <AppShell.Footer>

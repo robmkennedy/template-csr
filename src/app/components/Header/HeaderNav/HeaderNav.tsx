@@ -1,5 +1,5 @@
 import { Group } from '@mantine/core';
-import { HeaderLink } from '~app/Header/HeaderNav/HeaderLink/HeaderLink';
+import { HeaderLink } from '~app/components/Header/HeaderNav/HeaderLink/HeaderLink';
 import { aboutIcon, chartsIcon, itemsIcon, searchIcon } from '~assets/icons';
 import { useTranslation } from 'react-i18next';
 

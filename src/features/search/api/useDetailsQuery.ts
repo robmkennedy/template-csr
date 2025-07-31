@@ -1,5 +1,5 @@
 import axios from 'axios';
-import type { DetailsQuery, DetailsResult } from '~features/search/searchTypes';
+import type { DetailsQuery, DetailsResult } from '~features/search/types/searchTypes';
 import { useQuery } from '@tanstack/react-query';
 
 const apiKey = 'eb143593';

@@ -1,7 +1,7 @@
 import type { ReactNode } from 'react';
 import { Button, SimpleGrid, Stack, type StyleProp } from '@mantine/core';
-import { Loader } from '~common/components/Loader/Loader';
-import { Notice } from '~common/components/Notice/Notice';
+import { Loader } from '~shared/components/Loader/Loader';
+import { Notice } from '~shared/components/Notice/Notice';
 import { useTranslation } from 'react-i18next';
 import { moreIcon } from '~assets/icons';
 

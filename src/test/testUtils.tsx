@@ -1,7 +1,7 @@
 import { type ReactNode } from 'react';
 import { render as testingLibraryRender, type RenderOptions } from '@testing-library/react';
 import { MantineProvider } from '@mantine/core';
-import { theme } from '~common/styles/theme.ts';
+import { theme } from '~/styles/theme.ts';
 
 const TestWrapper = (children: ReactNode) => {
     return (

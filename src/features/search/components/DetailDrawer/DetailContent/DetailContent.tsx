@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react';
 import { Table } from '@mantine/core';
-import type { DetailsResult } from '~features/search/searchTypes';
+import type { DetailsResult } from '~features/search/types/searchTypes';
 
 type DetailContentProps = {
     details: DetailsResult;

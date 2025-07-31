@@ -1,6 +1,6 @@
 import { Container } from '@mantine/core';
-import { Notice } from '~common/components/Notice/Notice';
-import { Loader } from '~common/components/Loader/Loader';
+import { Notice } from '~shared/components/Notice/Notice';
+import { Loader } from '~shared/components/Loader/Loader';
 import { ResultGrid } from '~features/search/components/ResultGrid/ResultGrid';
 import { useSearchQuery } from '~features/search/api/useSearchQuery';
 import { useSearchTerm } from '~features/search/hooks/searchHooks';
