@@ -21,10 +21,10 @@ export function InfiniteGrid(props: InfiniteGridProps) {
     const { t } = useTranslation();
     const { cells = [], cols = {}, isError = false, isLoading = false, hasMore = false, onShowMore } = props;
 
-    console.log(props);
-
     const handleMoreClick = () => {
-        onShowMore && onShowMore();
+        if(onShowMore) {
+            onShowMore()
+        }
     };
 
     return (

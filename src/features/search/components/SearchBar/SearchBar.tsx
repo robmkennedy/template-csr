@@ -15,7 +15,9 @@ export function SearchBar() {
     const setSearchTerm = useSearchTerm()[1];
 
     const handleSearch = () => {
-        inputValue && setSearchTerm(inputValue);
+        if (inputValue) {
+            setSearchTerm(inputValue);
+        }
     };
 
     const handleKeyUp = (event: KeyboardEvent<HTMLInputElement>) => {
