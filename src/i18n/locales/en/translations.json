@@ -30,12 +30,12 @@
         },
         "results": {
             "loading": "Searching for items...",
-            "enter": "Enter a search term above to show results",
-            "error": "An error occurred while searching for results"
+            "enter": "Enter a search term above to show results.",
+            "error": "An error occurred while searching for results."
         },
         "details": {
             "loading": "Loading details...",
-            "error": "An error occurred while loading details"
+            "error": "An error occurred while loading details."
         }
     }
 }
