@@ -3,7 +3,7 @@ import { Button, SimpleGrid, Stack, type StyleProp } from '@mantine/core';
 import { Loader } from '~shared/components/Loader/Loader';
 import { Notice } from '~shared/components/Notice/Notice';
 import { useTranslation } from 'react-i18next';
-import { moreIcon } from '~assets/icons';
+import { moreIcon } from '~assets/images/icons';
 
 type InfiniteGridProps = {
     cells?: ReactNode[];

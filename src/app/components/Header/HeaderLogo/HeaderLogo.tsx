@@ -1,6 +1,6 @@
 import { Group, Image } from '@mantine/core';
 import { useTranslation } from 'react-i18next';
-import logo from '~assets/logo.svg';
+import logo from '~assets/images/logo.svg';
 
 export function HeaderLogo() {
     const { t } = useTranslation();

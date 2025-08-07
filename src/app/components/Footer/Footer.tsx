@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { SimpleGrid } from '@mantine/core';
 import { FooterLink } from '~app/components/Footer/FooterLink/FooterLink';
-import { aboutIcon, chartsIcon, itemsIcon, searchIcon } from '~assets/icons';
+import { aboutIcon, chartsIcon, itemsIcon, searchIcon } from '~assets/images/icons';
 
 export function Footer() {
     const { t } = useTranslation();

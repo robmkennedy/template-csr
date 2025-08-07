@@ -37,5 +37,11 @@
             "loading": "Loading details...",
             "error": "An error occurred while loading details."
         }
+    },
+    "about": {
+        "markdown": {
+            "loading": "Loading information...",
+            "error": "An error occurred while loading information."
+        }
     }
 }

@@ -1,6 +1,6 @@
 import { Group } from '@mantine/core';
 import { NavbarLink } from '~app/components/Navbar/NavbarLink/NavbarLink';
-import { aboutIcon, chartsIcon, itemsIcon, searchIcon } from '~assets/icons';
+import { aboutIcon, chartsIcon, itemsIcon, searchIcon } from '~assets/images/icons';
 import { useTranslation } from 'react-i18next';
 
 

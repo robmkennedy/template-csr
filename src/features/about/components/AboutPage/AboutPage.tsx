@@ -1,5 +1,5 @@
-import { Center } from '@mantine/core';
 import { Page } from '~/shared/components/Page/Page';
+import { AboutMarkdown } from '~features/about/components/AboutMarkdown/AboutMarkdown';
 
 /**
  * The home page of the application. It presents a search bar to the user allowing
@@ -9,9 +9,7 @@ import { Page } from '~/shared/components/Page/Page';
 export function AboutPage() {
     return (
         <Page>
-            <Center mt='xl'>
-                <div>About Page</div>
-            </Center>
+            <AboutMarkdown />
         </Page>
     );
 }
