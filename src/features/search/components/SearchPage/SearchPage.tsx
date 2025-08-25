@@ -1,4 +1,4 @@
-import { Stack } from '@mantine/core';
+import { Center, Stack } from '@mantine/core';
 import { Page } from '~/shared/components/Page/Page';
 import { SearchBar } from '~features/search/components/SearchBar/SearchBar';
 import { ResultContainer } from '~features/search/components/ResultContainer/ResultContainer';
@@ -11,8 +11,10 @@ import { ResultContainer } from '~features/search/components/ResultContainer/Res
 export function SearchPage() {
     return (
         <Page>
-            <Stack mt='lg' gap='xl'>
-                <SearchBar />
+            <Stack mt="lg" gap="xl">
+                <Center mt="md">
+                    <SearchBar />
+                </Center>
                 <ResultContainer />
             </Stack>
         </Page>

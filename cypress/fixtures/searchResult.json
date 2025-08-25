@@ -1,0 +1,48 @@
+{
+  "Search": [
+    {
+      "Title": "Title1",
+      "Year": "1988",
+      "imdbID": "tt111111",
+      "Type": "movie",
+      "Poster": "N/A"
+    },
+    {
+      "Title": "Title2",
+      "Year": "2018",
+      "imdbID": "tt10187294",
+      "Type": "movie",
+      "Poster": "N/A"
+    },
+    {
+      "Title": "Title3",
+      "Year": "2020",
+      "imdbID": "tt12482434",
+      "Type": "movie",
+      "Poster": "N/A"
+    },
+    {
+      "Title": "Title4",
+      "Year": "2025",
+      "imdbID": "tt36793739",
+      "Type": "movie",
+      "Poster": "N/A"
+    },
+    {
+      "Title": "Title5",
+      "Year": "1975",
+      "imdbID": "tt0234645",
+      "Type": "movie",
+      "Poster": "N/A"
+    },
+    {
+      "Title": "Title6",
+      "Year": "2016",
+      "imdbID": "tt4624394",
+      "Type": "series",
+      "Poster": "N/A"
+    }
+  ],
+  "totalResults": "6",
+  "Response": "True"
+}
